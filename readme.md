@@ -28,6 +28,13 @@ Si tout c'est bien passé vous devriez voir une page avec message avec le messag
 * /etc/init.d/apache2 stop    *Arrête le serveur*
 * /etc/init.d/apache2 restart *Redémarre le serveur*
 
+## Modifier les droit d'écriture
+
+Pour permettre a un utilisateur d'écrire dans le répertoire /var/www/html, on modifie les droits du propriétaire du répertoire.
+**User** représente l'utilisateur qui deviens le nouveau propriétaire.
+
+sudo chgrp -R user /var/www/html 
+
 ## Installer PHP
 
 Depuis le terninal, entrez la commande suivante :
