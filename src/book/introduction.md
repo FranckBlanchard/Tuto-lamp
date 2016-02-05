@@ -14,11 +14,11 @@ Effectivement ce n'est pas le seul tutoriel sur le sujet. Mais beaucoup ne sont 
 
 ## Remerciement
 
-Je tiens à remercier [Claude Lalonde](http://claudelalonde.ca), pour son temps passé à relire et corriger les diverses erreurs de ce tutoriel, ainsi que ma famille proche pour sa patience, et ses encouragements, sans lesquels tout ce travail ne serait pas possible.
+Je tiens à remercier Claude Lalonde, pour son temps passé à relire et corriger les diverses erreurs de ce tutoriel, ainsi que ma famille proche pour sa patience, et ses encouragements, sans lesquels tout ce travail ne serait pas possible.
 
 ## Contribuer
 
-Vous pouvez utiliser l'onglet issues pour contribuer facilemnent en soumettant vos commentaires, propositions, corrections,suggestions etc.
+Vous pouvez utiliser l'onglet issues pour contribuer facilemnent en soumettant vos commentaires, propositions, corrections, suggestions etc.
 
  » [https://github.com/FranckBlanchard/Tuto-lamp/issues](https://github.com/FranckBlanchard/Tuto-lamp/issues)
 

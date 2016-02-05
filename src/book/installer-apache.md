@@ -6,7 +6,7 @@ Dans un terminal, entrez la commande suivante :
 
 ## Tester l'installation
 
-Pour tester l'installation d'apache, rien de plus simple, il suffit d'ouvrir un navigateur web a l'adresse http://localhost/.
+Pour tester l'installation d'apache, rien de plus simple, il suffit d'ouvrir un navigateur web à l'adresse http://localhost/.
 
 Depuis le terminal, entrez la commande suivante :
 

@@ -1,6 +1,6 @@
 # Installer un système LAMP ( Apache, Mysql , PHP , PhpMyAdmin ) sur Linux Mint
 
-Dernière mise à jour le 2016-02-03 18:37:29.
+Dernière mise à jour le 2016-02-04 20:58:08.
 
 ## Avant propos
 
@@ -14,11 +14,11 @@ Effectivement ce n'est pas le seul tutoriel sur le sujet. Mais beaucoup ne sont 
 
 ## Remerciement
 
-Je tiens à remercier [Claude Lalonde](http://claudelalonde.ca), pour son temps passé à relire et corriger les diverses erreurs de ce tutoriel, ainsi que ma famille proche pour sa patience, et ses encouragements, sans lesquels tout ce travail ne serait pas possible.
+Je tiens à remercier Claude Lalonde, pour son temps passé à relire et corriger les diverses erreurs de ce tutoriel, ainsi que ma famille proche pour sa patience, et ses encouragements, sans lesquels tout ce travail ne serait pas possible.
 
 ## Contribuer
 
-Vous pouvez utiliser l'onglet issues pour contribuer facilemnent en soumettant vos commentaires, propositions, corrections,suggestions etc.
+Vous pouvez utiliser l'onglet issues pour contribuer facilemnent en soumettant vos commentaires, propositions, corrections, suggestions etc.
 
  » [https://github.com/FranckBlanchard/Tuto-lamp/issues](https://github.com/FranckBlanchard/Tuto-lamp/issues)
 
@@ -31,7 +31,7 @@ Dans un terminal, entrez la commande suivante :
 
 ## Tester l'installation
 
-Pour tester l'installation d'apache, rien de plus simple, il suffit d'ouvrir un navigateur web a l'adresse http://localhost/.
+Pour tester l'installation d'apache, rien de plus simple, il suffit d'ouvrir un navigateur web à l'adresse http://localhost/.
 
 Depuis le terminal, entrez la commande suivante :
 
@@ -94,7 +94,7 @@ Depuis un terninal taper:
 Pendant l'installation une boite de dialogue nous invites à selectionner pour quel serveur le script doit être configuré. Sélectionnez **Apache 2**, puis validez.
 
 Par la suite une deuxième boite de dialogue pour la configuration de **PhpMyAdmin** nous demande si nous voulons configurer la base de données de **PhpMyAdmin** avec dbconfig-common.
-Nous sélectionnez «oui» et validez.
+Vous sélectionnez «oui» et validez.
 
 Deux autres boites de dialogues nous invitent à définir des mots de passe, et à les comfirmer. Par défaut nous choisissons le mot de passe **mysql**.
 
@@ -104,7 +104,7 @@ Depuis le terminal, entrez la commande suivante:
 
     firefox http://localhost/phpmyadmin &
 
-Si tout s'est bien déroulé vous devriez  voir une interface graphique, avec un champ login et mot de passe pour ce connecter au programme.
+Si tout c'est bien déroulé vous devriez  voir une interface graphique, avec un champ login et mot de passe pour ce connecter au programme.
 
 Le login utilisateur est **phpmyadmin**, et le mot de passe est **mysql** (ou celui définit dans l'étape d'installation). Une fois les champs renseignés, nous avons accès à l'interface complète de **PhpMyAdmin**.
 ## Copyright et license
