@@ -18,7 +18,7 @@ Je tiens à remercier Claude Lalonde, pour son temps passé à relire et corrige
 
 ## Contribuer
 
-Vous pouvez utiliser l'onglet issues pour contribuer facilemnent en soumettant vos commentaires, propositions, corrections, suggestions etc.
+Vous pouvez utiliser l'onglet issues pour contribuer facilement en soumettant vos commentaires, propositions, corrections, suggestions etc.
 
  » [https://github.com/FranckBlanchard/Tuto-lamp/issues](https://github.com/FranckBlanchard/Tuto-lamp/issues)
 

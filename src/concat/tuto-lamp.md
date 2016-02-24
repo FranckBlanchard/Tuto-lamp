@@ -18,7 +18,7 @@ Je tiens à remercier Claude Lalonde, pour son temps passé à relire et corrige
 
 ## Contribuer
 
-Vous pouvez utiliser l'onglet issues pour contribuer facilemnent en soumettant vos commentaires, propositions, corrections, suggestions etc.
+Vous pouvez utiliser l'onglet issues pour contribuer facilement en soumettant vos commentaires, propositions, corrections, suggestions etc.
 
  » [https://github.com/FranckBlanchard/Tuto-lamp/issues](https://github.com/FranckBlanchard/Tuto-lamp/issues)
 
@@ -95,7 +95,7 @@ Pour résumer nous éditons le fichier de configuration de php avec l'éditeur d
 
     sudo vim /etc/php5/apache2/php.ini
 
-Nous recherchons la ligne qui commence par *display_errors*. Nous modifions celle-ci comme celui-là:
+Nous recherchons la ligne qui commence par *display_errors*. Nous modifions celle-ci comme ceci:
 
     display_errors = On
 
@@ -103,7 +103,7 @@ Puis la ligne qui commence par *error_reporting*, et la modifions de cette mani�
 
     error_reporting = E_ALL
 
-Nous enregistrons nos modifications et qui quittons notre éditeur. La configuration de base de **PHP** est maintenant terminé. À noter qu'il est possible de configurer certains paramètres de **PHP** de différentes manières, voir la documentation à l'adresse suivante : [http://php.net/manual/fr/configuration.file.php](http://php.net/manual/fr/configuration.file.php).
+Nous enregistrons nos modifications et quittons notre éditeur. La configuration de base de **PHP** est maintenant terminé. À noter qu'il est possible de configurer certains paramètres de **PHP** de différentes manières, voir la documentation à l'adresse suivante : [http://php.net/manual/fr/configuration.file.php](http://php.net/manual/fr/configuration.file.php).
 
 
 **Important :** pour valider les changements dans le fichier de configuration de **PHP** sur le serveur web **Apache**, il est nécessaire de redémarrer celui-ci, pour cela depuis votre terminal nous entrons la commande suivante :
@@ -151,6 +151,52 @@ Depuis le terminal, entrez la commande suivante:
 Si tout c'est bien déroulé vous devriez  voir une interface graphique, avec un champ login et mot de passe pour ce connecter au programme.
 
 Le login utilisateur est **phpmyadmin**, et le mot de passe est **mysql** (ou celui définit dans l'étape d'installation). Une fois les champs renseignés, nous avons accès à l'interface complète de **PhpMyAdmin**.
+## Installer xdebug
+
+**Xdebug** est un logiciel permettant de déboguer du code **php**. Il permet de suivre le déroulement d'un script afin de trouver et corriger les erreurs.
+
+Dans un terminal, entrez la commande suivante :
+
+    sudo apt-get install php5-xdebug
+
+## Tester l'installation en ligne de commande
+
+Ceci implique que la version **cli** de **PHP** soit installée.
+
+Depuis le terminal, entrez la commande suivante :
+
+    php -v
+
+Vous devriez obtenir quelque chose similaire à :
+
+    PHP 5.5.9-1ubuntu4.14 (cli) (built: Oct 28 2015 01:34:46)
+    Copyright (c) 1997-2014 The PHP Group
+    Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
+        with Zend OPcache v7.0.3, Copyright (c) 1999-2014, by Zend Technologies
+        with Xdebug v2.2.3, Copyright (c) 2002-2013, by Derick Rethans
+
+ou :
+
+    php /var/www/html/phpinfo.php
+
+Comme dans l'installation de **PHP** vous devriez trouver toutes les informations concernant le serveur web et les extensions installées, dont **xdebug**.
+
+## Tester l'installation depuis le serveur web
+
+Depuis notre navigateur nous allons taper l'adresse suivante:
+
+    http://localhost/phpinfo.php
+
+Comme précédemment, toute l'information sur le serveur et ses extensions sont affichées.
+
+## Configurer xdebug
+
+La configuration de **xdebug** se fait soit en modifiant le fichier *php.ini*, ou depuis votre script **PHP**.
+
+## Où trouver la documentation officiel
+
+La documentation se trouve à l'adresse suivante :
+[https://xdebug.org/](https://xdebug.org/)
 ## Copyright et license
 
 Tuto-LAMP Copyright (c) 2015-2016 Franck Blanchard

@@ -42,7 +42,7 @@ Pour résumer nous éditons le fichier de configuration de php avec l'éditeur d
 
     sudo vim /etc/php5/apache2/php.ini
 
-Nous recherchons la ligne qui commence par *display_errors*. Nous modifions celle-ci comme celui-là:
+Nous recherchons la ligne qui commence par *display_errors*. Nous modifions celle-ci comme ceci:
 
     display_errors = On
 
@@ -50,7 +50,7 @@ Puis la ligne qui commence par *error_reporting*, et la modifions de cette mani�
 
     error_reporting = E_ALL
 
-Nous enregistrons nos modifications et qui quittons notre éditeur. La configuration de base de **PHP** est maintenant terminé. À noter qu'il est possible de configurer certains paramètres de **PHP** de différentes manières, voir la documentation à l'adresse suivante : [http://php.net/manual/fr/configuration.file.php](http://php.net/manual/fr/configuration.file.php).
+Nous enregistrons nos modifications et quittons notre éditeur. La configuration de base de **PHP** est maintenant terminé. À noter qu'il est possible de configurer certains paramètres de **PHP** de différentes manières, voir la documentation à l'adresse suivante : [http://php.net/manual/fr/configuration.file.php](http://php.net/manual/fr/configuration.file.php).
 
 
 **Important :** pour valider les changements dans le fichier de configuration de **PHP** sur le serveur web **Apache**, il est nécessaire de redémarrer celui-ci, pour cela depuis votre terminal nous entrons la commande suivante :
