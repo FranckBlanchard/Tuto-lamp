@@ -1,6 +1,6 @@
 # Installer un système LAMP ( Apache, Mysql , PHP , PhpMyAdmin ) sur Linux Mint
 
-Dernière mise à jour le 2016-02-24 11:27:36.
+Dernière mise à jour le 2016-02-28 18:27:27.
 
 ## Avant propos
 
@@ -197,6 +197,13 @@ La configuration de **xdebug** se fait soit en modifiant le fichier *php.ini*, o
 
 La documentation se trouve à l'adresse suivante :
 [https://xdebug.org/](https://xdebug.org/)
+## À venir
+
+Le prochain chapitre sera consacré au programme **composer** que vous pouvez trouver à l’adresse [https://getcomposer.org/](https://getcomposer.org/).
+
+**Composer** est un logiciel de contrôle de dépendance pour les librairies **PHP** extérieures à votre projet.
+Nous pouvons aussi l'utiliser que pour gérer le chargement automatique des librairies que nous utilisons à l'intérieur d'un projet **PHP**.
+
 ## Copyright et license
 
 Tuto-LAMP Copyright (c) 2015-2016 Franck Blanchard
