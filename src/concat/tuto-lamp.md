@@ -1,21 +1,19 @@
-# Installer un système LAMP ( Apache, Mysql , PHP , PhpMyAdmin ) sur Linux Mint
-
-Dernière mise à jour le @@date@@.
-
+# Installer un serveur de développement LAMP ( Apache, Mysql , PHP , PhpMyAdmin )
 ## Avant propos
 
-Cette installation se fera en ligne de commande.
+L'instalation du serveur se fera sur une distribution **Linux** récente, avec un environnement de bureau accessible. Les instructions de ce document devraient être valide sur toute distribution compatible, de type **Debian**. En effet nous utiliserons les outils **apt-get** en ligne de commande.
 
-Elle a été testé sur une distribution **Linux Mint 17.3 Cinnamon 64 bit**. Cette documentation devrait être valide sous **Ubuntu**, puisque **Linux Mint** en dépend.
+Cette installation a été testé sur une distribution **Linux Mint 17.3 64 bits**. Cette documentation devrait être valide sous **Ubuntu**, puisque **Linux Mint** en dépend.
 
-## Pourquoi un autre tutoriel sur l'installation d'un système LAMP ?
+La dernière mise à jour du document date du @@date@@.
+## Objectif
 
-Effectivement ce n'est pas le seul tutoriel sur le sujet. Mais beaucoup ne sont pas à jour, et souvent incomplet, comme me l'ont fait remarquer des amis développeurs. En maintenant ce projet sur github, ces lacunes seront comblées.
+Ce document a pour but de fournir des explications claires et précises, sur l'installation d'un serveur de  développement web fonctionnel, ainsi que d'outils associés à celui-ci. Comme me l'ont fait remarquer des amis développeurs, il existe une miriade d'articles sur internet sur le sujet, mais souvent incomplet, où plus à l'ordre du jour.
 
+Donc en maintenant ce projet sur github, ces lacunes seront comblées.
 ## Remerciement
 
 Je tiens à remercier Claude Lalonde, pour son temps passé à relire et corriger les diverses erreurs de ce tutoriel, ainsi que ma famille proche pour sa patience, et ses encouragements, sans lesquels tout ce travail ne serait pas possible.
-
 ## Contribuer
 
 Vous pouvez utiliser l'onglet issues pour contribuer facilement en soumettant vos commentaires, propositions, corrections, suggestions etc.
