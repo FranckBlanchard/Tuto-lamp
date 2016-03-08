@@ -2,7 +2,7 @@
 
 **Composer** est un logiciel de contrôle de dépendance pour les librairies **PHP** extérieures à votre projet.
 Nous pouvons aussi l'utiliser que pour gérer le chargement automatique des librairies que nous utilisons a l'intérieur d'un projet **PHP**.
-**Composer** est une archive **PHAR** ([http://php.net/manual/fr/book.phar.php](http://php.net/manual/fr/book.phar.php"Documentation PHP")).
+**Composer** est une archive **PHAR** ([http://php.net/manual/fr/book.phar.php](http://php.net/manual/fr/book.phar.php "Documentation PHP")).
 
 ### Installer composer
 

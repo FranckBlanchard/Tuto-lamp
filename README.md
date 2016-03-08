@@ -5,7 +5,7 @@ L'instalation du serveur se fera sur une distribution **Linux** récente, avec u
 
 Cette installation a été testé sur une distribution **Linux Mint 17.3 64 bits**. Cette documentation devrait être valide sous **Ubuntu**, puisque **Linux Mint** en dépend.
 
-La dernière mise à jour du document date du 2016-03-07 13:44:17.
+La dernière mise à jour du document date du 2016-03-08 10:56:01.
 ## Objectif
 
 Ce document a pour but de fournir des explications claires et précises, sur l'installation d'un serveur de  développement web fonctionnel, ainsi que d'outils associés à celui-ci. Comme me l'ont fait remarquer des amis développeurs, il existe une miriade d'articles sur internet sur le sujet, mais souvent incomplet, où plus à l'ordre du jour.
@@ -23,7 +23,7 @@ Vous pouvez utiliser l'onglet issues pour contribuer facilement en soumettant vo
 Tous vos retours d'expérience sont très appréciés.
 ## Apache
 
-**Apache HTTP Server** (*Apache*) est un logiciel libre, fondé et maintenu par la [fondation Apache](http://www.apache.org/"Fondation Apache"). Celui-ci a pour vocation de servir des pages Web aux clients (navigateurs sur Internet). Sa conception est modulaire, ce qui en fait un des logiciels serveurs les plus utilisés aujourd'hui.
+**Apache HTTP Server** (*Apache*) est un logiciel libre, fondé et maintenu par la [fondation Apache](http://www.apache.org/ "Fondation Apache"). Celui-ci a pour vocation de servir des pages Web aux clients (navigateurs sur Internet). Sa conception est modulaire, ce qui en fait un des logiciels serveurs les plus utilisés aujourd'hui.
 Par la suite, nous emploierons le mot **Apache** pour désigner le serveur du même nom.
 
 ### Installer Apache
@@ -37,7 +37,7 @@ Dans un terminal, entrez la commande suivante :
 ### Tester l'installation d'Apache
 
 À l'installation du serveur, un fichier d'information sur celui-ci est placé à la racine du serveur.
-Nous entendons par «racine du serveur», le répertoire où nous devons placer les fichiers qui composeront notre site web. Si l'installation s'est bien déroulé, c'est ce fichier d'information qui devrait être affiché. Pour tester l'installation d'**Apache**, rien de plus simple, il suffit d'ouvrir un navigateur web à l'adresse [http://localhost/](http://localhost/"localhost"), et nous devrions voir notre fichier informatif.
+Nous entendons par «racine du serveur», le répertoire où nous devons placer les fichiers qui composeront notre site web. Si l'installation s'est bien déroulé, c'est ce fichier d'information qui devrait être affiché. Pour tester l'installation d'**Apache**, rien de plus simple, il suffit d'ouvrir un navigateur web à l'adresse [http://localhost/](http://localhost/ "localhost"), et nous devrions voir notre fichier informatif.
 
 Depuis le terminal, entrez la commande suivante :
 
@@ -70,7 +70,7 @@ Lors d'un changement dans un fichier de configuration, le serveur doit être red
 
 ### Documentation d'Apache
 
-La documentation en français d'**Apache** se trouve à cette adresse [https://httpd.apache.org/docs/2.4/fr/](https://httpd.apache.org/docs/2.4/fr/"Documentation d'Apache en Français"). Celle-ci est très bien documentée.
+La documentation en français d'**Apache** se trouve à cette adresse [https://httpd.apache.org/docs/2.4/fr/](https://httpd.apache.org/docs/2.4/fr/ "Documentation d'Apache en Français"). Celle-ci est très bien documentée.
 
 Il est à noté que chacune des distributions **Linux** possède ses propres politiques de mise en place des fichiers de configurations. **Apache** est très modulable, il en est de même pour ses fichiers de configuration. Il est donc important de vérifier sur votre distribution où sont ces fichiers.
 ## Installer PHP
@@ -223,7 +223,7 @@ La documentation se trouve à l'adresse suivante :
 
 **Composer** est un logiciel de contrôle de dépendance pour les librairies **PHP** extérieures à votre projet.
 Nous pouvons aussi l'utiliser que pour gérer le chargement automatique des librairies que nous utilisons a l'intérieur d'un projet **PHP**.
-**Composer** est une archive **PHAR** ([http://php.net/manual/fr/book.phar.php](http://php.net/manual/fr/book.phar.php"Documentation PHP")).
+**Composer** est une archive **PHAR** ([http://php.net/manual/fr/book.phar.php](http://php.net/manual/fr/book.phar.php "Documentation PHP")).
 
 ### Installer composer
 
