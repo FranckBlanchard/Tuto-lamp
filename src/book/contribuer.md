@@ -1,4 +1,4 @@
-## Contribuer
+# Contribuer
 
 Vous pouvez utiliser l'onglet issues pour contribuer facilement en soumettant vos commentaires, propositions, corrections, suggestions etc.
 

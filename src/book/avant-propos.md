@@ -1,4 +1,4 @@
-## Avant propos
+# Avant propos
 
 L'instalation du serveur se fera sur une distribution **Linux** récente, avec un environnement de bureau accessible. Les instructions de ce document devraient être valide sur toute distribution compatible, de type **Debian**. En effet nous utiliserons les outils **apt-get** en ligne de commande.
 

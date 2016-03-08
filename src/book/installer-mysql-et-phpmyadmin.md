@@ -1,3 +1,5 @@
+# MySQL
+
 ## Installer MySQL
 
 Depuis le terminal, entrez la commande suivante:

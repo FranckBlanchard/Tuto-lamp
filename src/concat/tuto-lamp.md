@@ -1,32 +1,32 @@
 # Installer un serveur de développement LAMP ( Apache, Mysql , PHP , PhpMyAdmin )
-## Avant propos
+# Avant propos
 
 L'instalation du serveur se fera sur une distribution **Linux** récente, avec un environnement de bureau accessible. Les instructions de ce document devraient être valide sur toute distribution compatible, de type **Debian**. En effet nous utiliserons les outils **apt-get** en ligne de commande.
 
 Cette installation a été testé sur une distribution **Linux Mint 17.3 64 bits**. Cette documentation devrait être valide sous **Ubuntu**, puisque **Linux Mint** en dépend.
 
 La dernière mise à jour du document date du @@date@@.
-## Objectif
+# Objectif
 
 Ce document a pour but de fournir des explications claires et précises, sur l'installation d'un serveur de  développement web fonctionnel, ainsi que d'outils associés à celui-ci. Comme me l'ont fait remarquer des amis développeurs, il existe une miriade d'articles sur internet sur le sujet, mais souvent incomplet, où plus à l'ordre du jour.
 
 Donc en maintenant ce projet sur github, ces lacunes seront comblées.
-## Remerciement
+# Remerciement
 
 Je tiens à remercier Claude Lalonde, pour son temps passé à relire et corriger les diverses erreurs de ce tutoriel, ainsi que ma famille proche pour sa patience, et ses encouragements, sans lesquels tout ce travail ne serait pas possible.
-## Contribuer
+# Contribuer
 
 Vous pouvez utiliser l'onglet issues pour contribuer facilement en soumettant vos commentaires, propositions, corrections, suggestions etc.
 
  » [https://github.com/FranckBlanchard/Tuto-lamp/issues](https://github.com/FranckBlanchard/Tuto-lamp/issues)
 
 Tous vos retours d'expérience sont très appréciés.
-## Apache
+# Apache
 
 **Apache HTTP Server** (*Apache*) est un logiciel libre, fondé et maintenu par la [fondation Apache](http://www.apache.org/ "Fondation Apache"). Celui-ci a pour vocation de servir des pages Web aux clients (navigateurs sur Internet). Sa conception est modulaire, ce qui en fait un des logiciels serveurs les plus utilisés aujourd'hui.
 Par la suite, nous emploierons le mot **Apache** pour désigner le serveur du même nom.
 
-### Installer Apache
+## Installer Apache
 
 L'installation n'est pas compliquée.
 
@@ -34,7 +34,7 @@ Dans un terminal, entrez la commande suivante :
 
     sudo apt-get install apache2
 
-### Tester l'installation d'Apache
+## Tester l'installation d'Apache
 
 À l'installation du serveur, un fichier d'information sur celui-ci est placé à la racine du serveur.
 Nous entendons par «racine du serveur», le répertoire où nous devons placer les fichiers qui composeront notre site web. Si l'installation s'est bien déroulé, c'est ce fichier d'information qui devrait être affiché. Pour tester l'installation d'**Apache**, rien de plus simple, il suffit d'ouvrir un navigateur web à l'adresse [http://localhost/](http://localhost/ "localhost"), et nous devrions voir notre fichier informatif.
@@ -45,12 +45,12 @@ Depuis le terminal, entrez la commande suivante :
 
 Si tout c'est bien passé vous devriez voir une page avec le message «it's work!» et d'autres informations sur le serveur.
 
-### Répertoire de travail
+## Répertoire de travail
 
 Le répertoire de travail du serveur est aussi appelé répertoire racine ou «document root» en anglais. Vous retrouverez cette expression dans les fichiers de configuration, il est donc important de la connaître.
 Ce répertoire est **/var/wwww/html**. C'est dans ce répertoire que nous mettrons les fichiers que nous voulons rendre accessible via le navigateur.
 
-### Modifier les droits d'écriture du répertoire racine
+## Modifier les droits d'écriture du répertoire racine
 
 Pour permettre à un utilisateur d'écrire dans le répertoire **/var/www/html**, nous modifions le propriétaire du répertoire.
 
@@ -60,7 +60,7 @@ Attention, cette façon de faire peut entraîner des problèmes de sécurités. 
 
     sudo chgrp -R user /var/www/html
 
-### Les commandes du serveur Apache
+## Les commandes du serveur Apache
 
 Lors d'un changement dans un fichier de configuration, le serveur doit être redémarrer pour qu'il soit pris en charge. Voici donc les commandes utiles :
 
@@ -68,11 +68,13 @@ Lors d'un changement dans un fichier de configuration, le serveur doit être red
 * /etc/init.d/apache2 stop    *Arrête le serveur*
 * /etc/init.d/apache2 restart *Redémarre le serveur*
 
-### Documentation d'Apache
+## Documentation d'Apache
 
 La documentation en français d'**Apache** se trouve à cette adresse [https://httpd.apache.org/docs/2.4/fr/](https://httpd.apache.org/docs/2.4/fr/ "Documentation d'Apache en Français"). Celle-ci est très bien documentée.
 
 Il est à noté que chacune des distributions **Linux** possède ses propres politiques de mise en place des fichiers de configurations. **Apache** est très modulable, il en est de même pour ses fichiers de configuration. Il est donc important de vérifier sur votre distribution où sont ces fichiers.
+# PHP
+
 ## Installer PHP
 
 Depuis le terminal, entrez la commande suivante :
@@ -103,7 +105,7 @@ Si la version en ligne de commande de **PHP** est installée, nous pouvons véri
 affichera la version de **PHP** qui est installée, ou :
 
     php /var/www/html/phpinfo.php
- 
+
 affichera les mêmes informations que celles précédemment visualisées dans notre navigateur.
 
 ## Configurer PHP pour un environnement de développement
@@ -135,6 +137,8 @@ Nous enregistrons nos modifications et quittons notre éditeur. La configuration
 ## Ou trouver la documentation officiel de PHP
 
 Le manuel en français du langage **PHP** peut être trouvé à cette adresse: [http://php.net/manual/fr/](http://php.net/manual/fr/).
+# MySQL
+
 ## Installer MySQL
 
 Depuis le terminal, entrez la commande suivante:
@@ -173,6 +177,7 @@ Depuis le terminal, entrez la commande suivante:
 Si tout c'est bien déroulé vous devriez  voir une interface graphique, avec un champ login et mot de passe pour ce connecter au programme.
 
 Le login utilisateur est **phpmyadmin**, et le mot de passe est **mysql** (ou celui définit dans l'étape d'installation). Une fois les champs renseignés, nous avons accès à l'interface complète de **PhpMyAdmin**.
+# Xdebug
 ## Installer xdebug
 
 **Xdebug** est un logiciel permettant de déboguer du code **php**. Il permet de suivre le déroulement d'un script afin de trouver et corriger les erreurs.
@@ -219,13 +224,13 @@ La configuration de **xdebug** se fait soit en modifiant le fichier *php.ini*, o
 
 La documentation se trouve à l'adresse suivante :
 [https://xdebug.org/](https://xdebug.org/)
-## Composer
+# Composer
 
 **Composer** est un logiciel de contrôle de dépendance pour les librairies **PHP** extérieures à votre projet.
 Nous pouvons aussi l'utiliser que pour gérer le chargement automatique des librairies que nous utilisons a l'intérieur d'un projet **PHP**.
 **Composer** est une archive **PHAR** ([http://php.net/manual/fr/book.phar.php](http://php.net/manual/fr/book.phar.php "Documentation PHP")).
 
-### Installer composer
+## Installer composer
 
 **Composer** peut être installé de plusieurs manières, soit de façon *local*, ou *global*.
 Installation **Local** signifie que nous devrons installer **composer** pour chaque projet **PHP**, tandis qu'avec une installation **global** , celle-ci ne se fera qu'une seule fois. C'est cette dernière méthode que nous allons utiliser.
@@ -236,7 +241,7 @@ L'installation va se dérouler en 3 étapes.
 2. Rendre l'archive exécutable.
 3. Déplacer et renommer l'archive dans un répertoire accessible par le «**path**» du système.
 
-#### Télécharger composer
+### Télécharger composer
 Pour télécharger composer nous devons récupérer les directives de téléchargement qui se trouvent à cette adresse [https://getcomposer.org/download/](https://getcomposer.org/download/), et les exécuter dans un terminal.
 
 Voici un exemple de code:
@@ -251,7 +256,7 @@ Voici un exemple de code:
 
 Il est très important de respecter cette procédure, car cela va permettre de récupérer la dernière version de **composer** et de vérifier la compatibilité avec le système en place.
 
-#### Rendre l'archive exécutable
+### Rendre l'archive exécutable
 
 Si l'étape précédente s'est bien déroulée, vous devriez avoir un fichier nommé *composer.phar* dans votre répertoire de travail.
 
@@ -259,7 +264,7 @@ Dans un terminal nous entrons :
 
     sudo chmod +x composer.phar
 
-#### Déplacer et renommer l'archive
+### Déplacer et renommer l'archive
 
 Dans un terminal nous entrons :
 
@@ -267,7 +272,7 @@ Dans un terminal nous entrons :
 
 À partir de maintenant, lorsque que nous aurons besoin de **composer**, le programme sera accessible depuis n'importe quel répertoire en simplement en tapant la commande «composer ...» dans un terminal.
 
-### Tester l'installation de composer
+## Tester l'installation de composer
 
 Rien de plus simple, dans un terminal nous entrons la commande suivante:
 
@@ -275,10 +280,10 @@ Rien de plus simple, dans un terminal nous entrons la commande suivante:
 
 Une page d'aide à l'utilisation du programme devrait être affichée, si tout s'est bien passé.
 
-### Documentation de composer
+## Documentation de composer
 Le site du projet **composer** se situe à l'adresse [https://getcomposer.org](https://getcomposer.org).
 La documentation de **composer** se trouve à celle-ci [https://getcomposer.org/doc/](https://getcomposer.org/doc/).
-## Copyright et license
+# Copyright et license
 
 Tuto-LAMP Copyright (c) 2015-2016 Franck Blanchard
 

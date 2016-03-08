@@ -1,4 +1,4 @@
-## Copyright et license
+# Copyright et license
 
 Tuto-LAMP Copyright (c) 2015-2016 Franck Blanchard
 

@@ -1,3 +1,5 @@
+# PHP
+
 ## Installer PHP
 
 Depuis le terminal, entrez la commande suivante :
@@ -28,7 +30,7 @@ Si la version en ligne de commande de **PHP** est installée, nous pouvons véri
 affichera la version de **PHP** qui est installée, ou :
 
     php /var/www/html/phpinfo.php
- 
+
 affichera les mêmes informations que celles précédemment visualisées dans notre navigateur.
 
 ## Configurer PHP pour un environnement de développement

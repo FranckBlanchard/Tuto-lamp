@@ -1,3 +1,4 @@
+# Xdebug
 ## Installer xdebug
 
 **Xdebug** est un logiciel permettant de déboguer du code **php**. Il permet de suivre le déroulement d'un script afin de trouver et corriger les erreurs.
