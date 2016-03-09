@@ -5,7 +5,7 @@ L'instalation du serveur se fera sur une distribution **Linux** récente, avec u
 
 Cette installation a été testé sur une distribution **Linux Mint 17.3 64 bits**. Cette documentation devrait être valide sous **Ubuntu**, puisque **Linux Mint** en dépend.
 
-La dernière mise à jour du document date du 2016-03-08 11:36:42.
+La dernière mise à jour du document date du 2016-03-09 17:06:11.
 # Objectif
 
 Ce document a pour but de fournir des explications claires et précises, sur l'installation d'un serveur de  développement web fonctionnel, ainsi que d'outils associés à celui-ci. Comme me l'ont fait remarquer des amis développeurs, il existe une miriade d'articles sur internet sur le sujet, mais souvent incomplet, où plus à l'ordre du jour.
@@ -75,30 +75,43 @@ La documentation en français d'**Apache** se trouve à cette adresse [https://h
 Il est à noté que chacune des distributions **Linux** possède ses propres politiques de mise en place des fichiers de configurations. **Apache** est très modulable, il en est de même pour ses fichiers de configuration. Il est donc important de vérifier sur votre distribution où sont ces fichiers.
 # PHP
 
+**PHP** est un langage de programmation interprété, libre et multiplateforme. C'est aussi un langage orienté objet. Il est principalement utilisé dans le développement web, mais pas seulement.
+
 ## Installer PHP
+
+Pour notre serveur **LAMP**, Nous allons installer le module **Apache** de **PHP**, ainsi que l'interpréteur en ligne de commande (cli) de **PHP**. Ce dernier est utilisé par de nombreux framework **PHP**.
+
+### Installer le module d'Apache
 
 Depuis le terminal, entrez la commande suivante :
 
     sudo apt-get install libapache2-mod-php5
 
-Nous pouvons aussi installer la version en ligne de commande de **PHP**, mais ce n'est pas une obligation.
-Pour cela, toujours depuis le terminal nous entrons la commande suivante :
+### Installer l'interpréteur de ligne de commande
+
+Depuis le terminal entrez la commande suivante :
 
     sudo apt-get install php5-cli
 
-## Tester PHP
+## Tester l'installation de PHP
 
 Pour cela, nous allons créer un fichier **phpinfo.php** dans le répertoire **/var/www/html**.
+
 Dans celui-ci nous allons insérer la ligne suivante :
 
 <?php phpinfo(); ?>
 
-Ensuite à partir de notre navigateur nous allons taper l'adresse suivante:
+### Tester le module d'Apache
 
-    http://localhost/phpinfo.php
+Depuis notre terminal, demarrons notre navigateur avec l'adresse http://localhost/phpinfo.php.
+
+    firefox http://localhost/phpinfo.php &
 
 Si tout c'est bien déroulé nous devrions avoir une page regroupant toutes les informations sur l'installation du serveur et des modules **PHP** qui sont installés.
-Si la version en ligne de commande de **PHP** est installée, nous pouvons vérifier si tout fonctionne avec la commande suivante :
+
+### Tester l'interpréteur de ligne de commande
+
+Nous pouvons vérifier si l'interpréteur fonctionne avec la commande suivante :
 
     php -v
 
@@ -106,14 +119,14 @@ affichera la version de **PHP** qui est installée, ou :
 
     php /var/www/html/phpinfo.php
 
-affichera les mêmes informations que celles précédemment visualisées dans notre navigateur.
+affichera les mêmes informations que celles précédemment visualisées dans notre navigateur, pour vérifier le module d'**Apache**.
 
 ## Configurer PHP pour un environnement de développement
 
 La configuration du langage **PHP** se fait à travers un fichier de configuration : *php.ini*.
 Celui-ci se trouve dans le répertoire */etc/php5/apache2/php.ini*.
 
-Nous allons changer 2 valeurs de configuration dans notre fichier, *error_reporting* et *display_errors*. *error_reporting* définit quel est le type d'erreur que nous voulons que **PHP** nous signale, nous réglerons donc cette valleur à *E_ALL*. Puis nous réglerons *display_errors* à on pour que **PHP** nous affiche les erreurs.
+Nous allons changer 2 valeurs de configuration dans notre fichier, *error_reporting* et *display_errors*. *error_reporting* définit quel est le type d'erreur que nous voulons que **PHP** nous signale, nous réglerons donc cette valleur à *E_ALL*. Puis nous réglerons *display_errors* à *on* pour que **PHP** nous affiche les erreurs.
 
 Pour résumer nous éditons le fichier de configuration de php avec l'éditeur de notre choix:
 
@@ -134,6 +147,7 @@ Nous enregistrons nos modifications et quittons notre éditeur. La configuration
 
     sudo /etc/init.d/apache2 restart
 
+Il est a noter que pour la version *cli* de **PHP**, le fichier de configuration *php.ini* est lu à chaque exécution.
 ## Ou trouver la documentation officiel de PHP
 
 Le manuel en français du langage **PHP** peut être trouvé à cette adresse: [http://php.net/manual/fr/](http://php.net/manual/fr/).
@@ -283,6 +297,9 @@ Une page d'aide à l'utilisation du programme devrait être affichée, si tout s
 ## Documentation de composer
 Le site du projet **composer** se situe à l'adresse [https://getcomposer.org](https://getcomposer.org).
 La documentation de **composer** se trouve à celle-ci [https://getcomposer.org/doc/](https://getcomposer.org/doc/).
+# À venir
+
+Le prochain chapitre sera consacré au programme **PHP_CodeSniffer** que vous pouvez trouver à l’adresse [https://github.com/squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 # Copyright et license
 
 Tuto-LAMP Copyright (c) 2015-2016 Franck Blanchard

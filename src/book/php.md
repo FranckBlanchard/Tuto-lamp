@@ -1,29 +1,42 @@
 # PHP
 
+**PHP** est un langage de programmation interprété, libre et multiplateforme. C'est aussi un langage orienté objet. Il est principalement utilisé dans le développement web, mais pas seulement.
+
 ## Installer PHP
+
+Pour notre serveur **LAMP**, Nous allons installer le module **Apache** de **PHP**, ainsi que l'interpréteur en ligne de commande (cli) de **PHP**. Ce dernier est utilisé par de nombreux framework **PHP**.
+
+### Installer le module d'Apache
 
 Depuis le terminal, entrez la commande suivante :
 
     sudo apt-get install libapache2-mod-php5
 
-Nous pouvons aussi installer la version en ligne de commande de **PHP**, mais ce n'est pas une obligation.
-Pour cela, toujours depuis le terminal nous entrons la commande suivante :
+### Installer l'interpréteur de ligne de commande
+
+Depuis le terminal entrez la commande suivante :
 
     sudo apt-get install php5-cli
 
-## Tester PHP
+## Tester l'installation de PHP
 
 Pour cela, nous allons créer un fichier **phpinfo.php** dans le répertoire **/var/www/html**.
+
 Dans celui-ci nous allons insérer la ligne suivante :
 
 <?php phpinfo(); ?>
 
-Ensuite à partir de notre navigateur nous allons taper l'adresse suivante:
+### Tester le module d'Apache
 
-    http://localhost/phpinfo.php
+Depuis notre terminal, demarrons notre navigateur avec l'adresse http://localhost/phpinfo.php.
+
+    firefox http://localhost/phpinfo.php &
 
 Si tout c'est bien déroulé nous devrions avoir une page regroupant toutes les informations sur l'installation du serveur et des modules **PHP** qui sont installés.
-Si la version en ligne de commande de **PHP** est installée, nous pouvons vérifier si tout fonctionne avec la commande suivante :
+
+### Tester l'interpréteur de ligne de commande
+
+Nous pouvons vérifier si l'interpréteur fonctionne avec la commande suivante :
 
     php -v
 
@@ -31,14 +44,14 @@ affichera la version de **PHP** qui est installée, ou :
 
     php /var/www/html/phpinfo.php
 
-affichera les mêmes informations que celles précédemment visualisées dans notre navigateur.
+affichera les mêmes informations que celles précédemment visualisées dans notre navigateur, pour vérifier le module d'**Apache**.
 
 ## Configurer PHP pour un environnement de développement
 
 La configuration du langage **PHP** se fait à travers un fichier de configuration : *php.ini*.
 Celui-ci se trouve dans le répertoire */etc/php5/apache2/php.ini*.
 
-Nous allons changer 2 valeurs de configuration dans notre fichier, *error_reporting* et *display_errors*. *error_reporting* définit quel est le type d'erreur que nous voulons que **PHP** nous signale, nous réglerons donc cette valleur à *E_ALL*. Puis nous réglerons *display_errors* à on pour que **PHP** nous affiche les erreurs.
+Nous allons changer 2 valeurs de configuration dans notre fichier, *error_reporting* et *display_errors*. *error_reporting* définit quel est le type d'erreur que nous voulons que **PHP** nous signale, nous réglerons donc cette valleur à *E_ALL*. Puis nous réglerons *display_errors* à *on* pour que **PHP** nous affiche les erreurs.
 
 Pour résumer nous éditons le fichier de configuration de php avec l'éditeur de notre choix:
 
@@ -59,6 +72,7 @@ Nous enregistrons nos modifications et quittons notre éditeur. La configuration
 
     sudo /etc/init.d/apache2 restart
 
+Il est a noter que pour la version *cli* de **PHP**, le fichier de configuration *php.ini* est lu à chaque exécution.
 ## Ou trouver la documentation officiel de PHP
 
 Le manuel en français du langage **PHP** peut être trouvé à cette adresse: [http://php.net/manual/fr/](http://php.net/manual/fr/).
