@@ -5,7 +5,7 @@ L'instalation du serveur se fera sur une distribution **Linux** récente, avec u
 
 Cette installation a été testé sur une distribution **Linux Mint 17.3 64 bits**. Cette documentation devrait être valide sous **Ubuntu**, puisque **Linux Mint** en dépend.
 
-La dernière mise à jour du document date du 2016-03-09 17:06:11.
+La dernière mise à jour du document date du 2016-03-11 18:22:45.
 # Objectif
 
 Ce document a pour but de fournir des explications claires et précises, sur l'installation d'un serveur de  développement web fonctionnel, ainsi que d'outils associés à celui-ci. Comme me l'ont fait remarquer des amis développeurs, il existe une miriade d'articles sur internet sur le sujet, mais souvent incomplet, où plus à l'ordre du jour.
