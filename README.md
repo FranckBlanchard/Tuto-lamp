@@ -5,7 +5,7 @@ L'instalation du serveur se fera sur une distribution **Linux** récente, avec u
 
 Cette installation a été testé sur une distribution **Linux Mint 17.3 64 bits**. Cette documentation devrait être valide sous **Ubuntu**, puisque **Linux Mint** en dépend.
 
-La dernière mise à jour du document date du 2016-03-11 18:22:45.
+La dernière mise à jour du document date du 2016-03-16 20:06:06.
 # Objectif
 
 Ce document a pour but de fournir des explications claires et précises, sur l'installation d'un serveur de  développement web fonctionnel, ainsi que d'outils associés à celui-ci. Comme me l'ont fait remarquer des amis développeurs, il existe une miriade d'articles sur internet sur le sujet, mais souvent incomplet, où plus à l'ordre du jour.
@@ -167,6 +167,29 @@ Nous devons maintenant installer les modules **PHP** et **MySQL** du serveur apa
 
     sudo apt-get install libapach2-mod-auth-mysql php5-mysql
 
+## Tester l'installation de MySQL
+
+Nous testons l'installation en ligne de commande. Dans un terminal nous entrons la commande suivante:
+
+    mysql -h localhost --user=root -pmysql
+
+Remarquez l'absence d'espace en -p et le mot de passe (mysql).
+
+Si l'installation s'est correctement déroulé vous devriez avoir quelque chose qui ressemble à ce qui suit :
+
+    Welcome to the MySQL monitor.  Commands end with ; or \g.
+    Your MySQL connection id is 51
+    Server version: 5.5.47-0ubuntu0.14.04.1 (Ubuntu)
+
+    Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+    Oracle is a registered trademark of Oracle Corporation and/or its
+    affiliates. Other names may be trademarks of their respective
+    owners.
+
+    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+    mysql>
 ## Installer PhpMyAdmin
 
 **PhpMyAdmin** est un script **PHP** accessible via le serveur **Apache** qui nous premettra d'accéder au serveur de la base de données **MySQL**.
@@ -182,7 +205,7 @@ Vous sélectionnez «oui» et validez.
 
 Deux autres boites de dialogues nous invitent à définir des mots de passe, et à les comfirmer. Par défaut nous choisissons le mot de passe **mysql**.
 
-## Tester l'installation de MySQL
+## Tester l'installation de PhpMyAdmin
 
 Depuis le terminal, entrez la commande suivante:
 
